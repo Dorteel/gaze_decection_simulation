@@ -15,8 +15,8 @@ WorldInfo {
   title "Human Skin Animation"
 }
 Viewpoint {
-  orientation -0.001986616690386385 0.4156404545851656 -0.9095268362540835 1.0445726275627567
-  position -7.169381050306621 2.2064133436282627 4.848941650284863
+  orientation 0.046431746240799765 0.09650907442096787 -0.9942485059055597 1.7966609442362866
+  position -2.898370879258135 -0.9000475057743427 2.8581246496474866
 }
 TexturedBackground {
   texture "noon_cloudy_countryside"
@@ -34,8 +34,8 @@ Floor {
 DEF ROBERT Robot {
   translation -3 -3 0
   children [
-    Transform {
-      translation 7.51 0 2.13
+    DEF VISUAL-FIELD Transform {
+      translation 7.55 0 2.13
       rotation 0 1 0 -1.5707953071795862
       children [
         Shape {
@@ -67,66 +67,8 @@ DEF ROBERT Robot {
     "-d"
     "Robert"
     "-f"
-    "../../motions/walk.bvh"
+    "../../motions/gaze.bvh"
     "-l"
   ]
   supervisor TRUE
-}
-DEF SANDRA Robot {
-  translation 7.08473e-06 -5.3 -5.12216e-05
-  rotation 0 0 1 1.5708
-  children [
-    CharacterSkin {
-      name "Sandra"
-    }
-  ]
-  name "sandra"
-  controllerArgs [
-    "Sandra"
-  ]
-  supervisor TRUE
-}
-DEF SOPHIA Robot {
-  translation 1.57653 -5.52878 -1.70245e-05
-  rotation 0 0 1 1.8326
-  children [
-    CharacterSkin {
-      name "Sophia"
-      model "Sophia"
-    }
-  ]
-  name "sophia"
-  controller "bvh_animation"
-  controllerArgs [
-    "-d"
-    "Sophia"
-    "-f"
-    "../../motions/jump.bvh"
-    "-s"
-    "100"
-  ]
-  supervisor TRUE
-}
-DEF ANTHONY Robot {
-  translation -3 -1.48 -1.10673e-05
-  children [
-    CharacterSkin {
-      name "Anthony"
-      model "Anthony"
-    }
-  ]
-  name "anthony"
-  controller "bvh_animation"
-  controllerArgs [
-    "-d"
-    "Anthony"
-    "-f"
-    "../../motions/run.bvh"
-    "-l"
-  ]
-  supervisor TRUE
-}
-DEF VISUAL-FIELD Transform {
-  translation 4.53 -3 2.12
-  rotation 0 1 0 -1.5707953071795862
 }
